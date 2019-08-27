@@ -14,6 +14,7 @@ class LandOwner : AppCompatActivity() {
         setContentView(R.layout.activity_land_owner)
         setSupportActionBar(toolbar)
 
+        //OnClick starts LandOwnerFragment
         button_create_listing.setOnClickListener {
             val fragment = LandOwnerFragment()
             fragment.show(supportFragmentManager, "tag")

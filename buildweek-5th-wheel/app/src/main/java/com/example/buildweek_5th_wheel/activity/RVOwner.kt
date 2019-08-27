@@ -11,9 +11,5 @@ class RVOwner : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rvowners)
 
-        button_create_listing.setOnClickListener {
-
-        }
-
     }
 }

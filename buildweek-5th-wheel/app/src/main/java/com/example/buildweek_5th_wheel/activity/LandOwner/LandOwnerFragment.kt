@@ -24,25 +24,30 @@ class LandOwnerFragment : DialogFragment() {
     }
 
     override fun onCreateView(
+        //Displays land_owner_fragment in the fragment
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.land_owner_fragment, container, false)
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        //Gets user input from the EditText views
         val listingName = listing_name.text.toString()
         val description = listing_description.text.toString()
+        //On click of the image it starts an intent to look for an image
         image_add_image.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "image/*"
             startActivityForResult(intent, IMG_REQUEST_CODE)
         }
+
+        ///TODO: add alert if user does not selects and image or puts in text
+        //Creates a new listing form the User input
         button_submit_listing.setOnClickListener {
             if(image != null){
                 MockData.landListingList.add(LandListingCreator(image, listingName, MainActivity.userNameFromMain, description))
                 dismiss()
             }
-            println(MockData.landListingList.size)
         }
 
 
@@ -51,6 +56,7 @@ class LandOwnerFragment : DialogFragment() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        //returns uri of the image user selected
         if (requestCode == IMG_REQUEST_CODE && resultCode == Activity.RESULT_OK){
             image = data?.data
             image_add_image.setImageURI(image)
