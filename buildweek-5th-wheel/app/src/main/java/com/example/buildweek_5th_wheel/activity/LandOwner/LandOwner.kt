@@ -1,4 +1,4 @@
-package com.example.buildweek_5th_wheel.activity
+package com.example.buildweek_5th_wheel.activity.LandOwner
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -14,9 +14,9 @@ class LandOwner : AppCompatActivity() {
         setContentView(R.layout.activity_land_owner)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        button_create_listing.setOnClickListener {
+            val fragment = LandOwnerFragment()
+            fragment.show(supportFragmentManager, "tag")
         }
     }
 

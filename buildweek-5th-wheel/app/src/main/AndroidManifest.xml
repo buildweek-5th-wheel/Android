@@ -10,7 +10,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".activity.LandOwner"
+                android:name=".activity.LandOwner.LandOwner"
                 android:label="@string/title_activity_land_owner"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
