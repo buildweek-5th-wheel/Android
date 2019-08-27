@@ -10,6 +10,7 @@
         tools:context=".activity.MainActivity">
 
     <LinearLayout
+            android:id="@+id/login_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#D8D8D8"
@@ -17,14 +18,14 @@
 
 
         <EditText
-                android:id="@+id/username"
+                android:id="@+id/username_main"
                 style="@style/login"
                 android:hint="@string/username"
                 android:inputType="text"/>
 
 
         <EditText
-                android:id="@+id/password"
+                android:id="@+id/password_main"
                 style="@style/login"
                 android:hint="@string/password"
                 android:inputType="textPassword" />

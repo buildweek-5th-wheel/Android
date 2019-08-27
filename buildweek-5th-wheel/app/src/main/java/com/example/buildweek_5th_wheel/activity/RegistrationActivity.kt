@@ -1,11 +1,9 @@
 package com.example.buildweek_5th_wheel.activity
 
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
-import androidx.core.view.setPadding
+import com.example.buildweek_5th_wheel.utli.LogInAlert
 import com.example.buildweek_5th_wheel.MockData
 import com.example.buildweek_5th_wheel.R
 import com.example.buildweek_5th_wheel.model.CreateUser
@@ -33,11 +31,7 @@ class RegistrationActivity : AppCompatActivity() {
 
             //Creates an TextView at the top of the page to let the user know that the haven't add a username/password
             else {
-                val invalidInput = TextView(this)
-                invalidInput.text = getString(R.string.invalid_registration)
-                invalidInput.setTextColor(Color.RED)
-                invalidInput.setPadding(8)
-                registration_layout.addView(invalidInput, 0)
+                LogInAlert.createAlert(registration_layout)
             }
         }
     }
