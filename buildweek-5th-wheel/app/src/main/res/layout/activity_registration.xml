@@ -1,44 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        android:id="@+id/registration_layout"
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/registration_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#96A550"
+        android:gravity="center_vertical"
         android:orientation="vertical"
         tools:context=".activity.RegistrationActivity">
 
-    <EditText
-            android:id="@+id/username"
+
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:inputType="text"
-            android:hint="@string/username" />
+            android:background="#D8D8D8"
+            android:orientation="vertical">
 
-    <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:inputType="textPassword"
-            android:hint="@string/password" />
+        <EditText
+                android:id="@+id/username"
+                style="@style/login"
+                android:hint="@string/username"
+                android:inputType="text" />
 
-    <CheckBox
-            android:id="@+id/landowner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Land owner"
-            android:textSize="20sp"/>
+        <EditText
+                android:id="@+id/password"
+                style="@style/login"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
 
-    <Button
-            android:id="@+id/btn_sign_up"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/sign_up"
-            android:textSize="20sp"/>
+        <CheckBox
+                android:id="@+id/landowner"
+                style="@style/login"
+                android:text="@string/land_owner"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorAccent" />
 
+        <Button
+                android:id="@+id/btn_sign_up"
+                style="@style/login"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorAccent"
+                android:text="@string/sign_up"
+                android:textColor="@android:color/white" />
 
+    </LinearLayout>
 
 </LinearLayout>

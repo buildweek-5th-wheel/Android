@@ -34,7 +34,6 @@
                 android:id="@+id/btn_login"
                 style="@style/login"
                 android:background="@color/colorAccent"
-                android:fontFamily="sans-serif-light"
                 android:text="@string/login"
                 android:textColor="@android:color/white" />
 

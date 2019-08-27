@@ -6,4 +6,5 @@
     <string name="sign_up">Sign Up</string>
     <string name="invalid_registration">Please enter a valid username/password</string>
     <string name="title_activity_land_owner">LandOwner</string>
+    <string name="land_owner">Are you registering as a land owner?</string>
 </resources>
