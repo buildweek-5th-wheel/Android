@@ -1,9 +1,13 @@
 package com.example.buildweek_5th_wheel.activity
 
+import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.example.buildweek_5th_wheel.MockData
 import com.example.buildweek_5th_wheel.R
 import com.example.buildweek_5th_wheel.model.CreateUser
@@ -30,6 +34,10 @@ class MainActivity : AppCompatActivity() {
         register.setOnClickListener {
             startActivity(launchRegistrationActivity)
         }
+
+        /*val imageView = ImageView(this)
+        imageView.setImageURI(Uri.parse(MockData.images[0]))
+        login_layout.addView(imageView)*/
 
 
         //val gotoLandOwner = Intent(this, LandOwner::class.java)
