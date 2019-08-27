@@ -6,6 +6,7 @@
         android:layout_height="wrap_content">
 
     <LinearLayout
+            android:id="@+id/list_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -14,7 +15,7 @@
                 android:id="@+id/rv_owners_list_item_image"
                 style="@style/cardViewItems"
                 tools:contentDescription="placeholder image"
-                tools:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background" />
 
         <TextView
                 android:id="@+id/rv_owners_list_item_title"
