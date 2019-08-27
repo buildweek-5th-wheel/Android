@@ -11,7 +11,7 @@ object MockData {
     val LandOwners = arrayListOf(false, false, true, true)
 
 
-    fun CreateLogInList(){
+    fun createLogInList(){
         for (i in userNames.indices){
             MockData.logInList.add(CreateUser(userNames[i], passWords[i], LandOwners[i]))
         }

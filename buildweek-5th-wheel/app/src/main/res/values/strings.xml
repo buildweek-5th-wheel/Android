@@ -5,4 +5,5 @@
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
     <string name="invalid_registration">Please enter a valid username/password</string>
+    <string name="title_activity_land_owner">LandOwner</string>
 </resources>
