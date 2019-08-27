@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val gotoLandOwner = Intent(this, LandOwner::class.java)
+        //val gotoLandOwner = Intent(this, LandOwner::class.java)
         val gotoRVOwner = Intent(this, RVOwner::class.java)
 
         btn_login.setOnClickListener {
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 MockData.logInList.forEach {
                     if (it.userName == userName && it.passWord == passWord) {
                         when (it.isLandOwner) {
-                            true -> startActivity(gotoLandOwner) // launch land owner activity
+                            //true -> startActivity(gotoLandOwner) // launch land owner activity
                             false -> startActivity(gotoRVOwner) //launch rv activity
                         }
                     }
