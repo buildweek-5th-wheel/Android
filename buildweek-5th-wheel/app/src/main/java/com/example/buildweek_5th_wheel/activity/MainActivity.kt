@@ -3,17 +3,19 @@ package com.example.buildweek_5th_wheel.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.buildweek_5th_wheel.MockData
 import com.example.buildweek_5th_wheel.R
-import com.example.buildweek_5th_wheel.model.CreateUser
+import com.example.buildweek_5th_wheel.activity.LandOwner.LandOwner
 import com.example.buildweek_5th_wheel.utli.LogInAlert
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_registration.*
 
 class MainActivity : AppCompatActivity() {
 
     //TODO: add display of RVOwner and LandOwner
+
+    companion object {
+        var userNameFromMain = ""
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,8 +33,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(launchRegistrationActivity)
         }
 
-
-        //val gotoLandOwner = Intent(this, LandOwner::class.java)
+        val gotoLandOwner = Intent(this, LandOwner::class.java)
         val gotoRVOwner = Intent(this, RVOwner::class.java)
 
         btn_login.setOnClickListener {
@@ -42,7 +43,10 @@ class MainActivity : AppCompatActivity() {
                 MockData.logInList.forEach {
                     if (it.userName == userName && it.passWord == passWord) {
                         when (it.isLandOwner) {
-                            //true -> startActivity(gotoLandOwner) // launch land owner activity
+                            true -> {
+                                userNameFromMain = userName
+                                startActivity(gotoLandOwner)
+                            }// launch land owner activity
                             false -> startActivity(gotoRVOwner) //launch rv activity
                         }
                     }
