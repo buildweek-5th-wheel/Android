@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#96A550"
+        android:gravity="center_vertical"
         android:orientation="vertical"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+        android:padding="16dp"
+        tools:context=".MainActivity">
 
-    <EditText
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="username"
-            android:inputType="text"
-            android:textSize="20sp"/>
+            android:background="#D8D8D8"
+            android:orientation="vertical">
 
-    <EditText
-            android:id="@+id/password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="password"
-            android:inputType="text"
-            android:textSize="20sp"/>
 
-    <Button
-            android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:textSize="20sp"/>
+        <EditText
+                android:id="@+id/username"
+                style="@style/login"
+                android:hint="@string/username"
+                android:inputType="text"/>
 
-    <TextView
-            android:id="@+id/register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:textSize="20sp"/>
+
+        <EditText
+                android:id="@+id/password"
+                style="@style/login"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+
+        <Button
+                android:id="@+id/btn_login"
+                style="@style/login"
+                android:background="@color/colorAccent"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/login"
+                android:textColor="@android:color/white" />
+
+        <TextView
+                android:id="@+id/register"
+                style="@style/login"
+                android:layout_marginBottom="16dp"
+                android:text="@string/sign_up"
+                android:textColor="@color/colorAccent" />
+    </LinearLayout>
 
 </LinearLayout>
