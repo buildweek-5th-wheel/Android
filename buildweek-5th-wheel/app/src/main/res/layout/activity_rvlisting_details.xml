@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".activity.RVListingDetails">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+            android:layout_weight="1"
+            android:id="@+id/rv_owners_details_image"
+            style="@style/cardViewItems"
+            android:adjustViewBounds="true"
+            tools:contentDescription="placeholder image"
+            android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+            android:id="@+id/rv_owners_details_title"
+            style="@style/cardViewItems"
+            android:textSize="20sp"
+            tools:text="title of listing" />
+
+    <TextView
+            android:id="@+id/rv_owners_details_owner_name"
+            style="@style/cardViewItems"
+            android:textSize="20sp"
+            tools:text="username" />
+
+    <TextView
+            android:id="@+id/rv_owners_details_desc"
+            style="@style/cardViewItems"
+            android:textSize="16sp"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+    <Button
+            android:id="@+id/btn_reserve"
+            style="@style/cardViewItems"
+            android:layout_marginBottom="8dp"
+            tools:background="@color/colorPrimary"
+            tools:textColor="@color/colorAccent"
+            tools:text="reserve" />
+
+
+</LinearLayout>

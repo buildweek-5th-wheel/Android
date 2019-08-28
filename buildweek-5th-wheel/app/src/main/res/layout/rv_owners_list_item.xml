@@ -14,6 +14,7 @@
         <ImageView
                 android:id="@+id/rv_owners_list_item_image"
                 style="@style/cardViewItems"
+                android:adjustViewBounds="true"
                 tools:contentDescription="placeholder image"
                 android:src="@drawable/ic_launcher_background" />
 
