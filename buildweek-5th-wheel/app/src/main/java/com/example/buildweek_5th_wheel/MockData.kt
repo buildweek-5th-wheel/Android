@@ -48,7 +48,7 @@ object MockData {
         for (i in images.indices) {
             MockData.landListingList.add(
                 LandListingCreator(
-                    Uri.parse(images[i]),
+                    images[i],
                     listingName[i],
                     landOwnerName[i],
                     description[i]

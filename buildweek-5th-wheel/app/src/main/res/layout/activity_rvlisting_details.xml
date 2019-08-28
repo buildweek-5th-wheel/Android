@@ -39,7 +39,7 @@
             android:layout_marginBottom="8dp"
             tools:background="@color/colorPrimary"
             tools:textColor="@color/colorAccent"
-            tools:text="reserve" />
+            tools:text="reserve"/>
 
 
 </LinearLayout>
