@@ -9,7 +9,7 @@
     <ImageView
             android:id="@+id/image_add_image"
             android:adjustViewBounds="true"
-            android:src="@drawable/car_land"
+            android:src="@drawable/select_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

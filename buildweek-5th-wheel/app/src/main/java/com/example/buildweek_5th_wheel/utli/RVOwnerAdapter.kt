@@ -14,6 +14,7 @@ import com.example.buildweek_5th_wheel.R
 import com.example.buildweek_5th_wheel.activity.RVListingDetails
 import com.example.buildweek_5th_wheel.model.LandListingCreator
 import kotlinx.android.synthetic.main.rv_owners_list_item.view.*
+import java.io.Serializable
 
 class RVOwnerAdapter(val data: ArrayList<LandListingCreator>) : RecyclerView.Adapter<RVOwnerAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,7 +31,7 @@ class RVOwnerAdapter(val data: ArrayList<LandListingCreator>) : RecyclerView.Ada
 
         holder.listItem.setOnClickListener {
             val intent = Intent(it.context, RVListingDetails::class.java)
-            //intent.putExtra("key", data[position])
+            intent.putExtra("key", position)
             startActivity(it.context, intent, null)
         }
     }

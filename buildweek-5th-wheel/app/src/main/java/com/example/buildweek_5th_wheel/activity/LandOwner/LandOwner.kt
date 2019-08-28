@@ -31,6 +31,8 @@ class LandOwner : AppCompatActivity(), LandOwnerFragment.OnFragmentInteractionLi
         }
         recycler_view_land_owner.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
 
+        //TODO: make the recycler view keep data when user leaves
+        //recycler_view_land_owner.adapter = LandOwnerRecycler(MockData.landListingList)
 
 
 

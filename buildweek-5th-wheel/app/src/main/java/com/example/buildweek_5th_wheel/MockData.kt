@@ -1,8 +1,6 @@
 package com.example.buildweek_5th_wheel
 
-import android.content.res.Resources
 import android.net.Uri
-import androidx.core.content.ContextCompat
 import com.example.buildweek_5th_wheel.model.CreateUser
 import com.example.buildweek_5th_wheel.model.LandListingCreator
 
