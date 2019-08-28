@@ -47,7 +47,7 @@ class LandOwnerFragment : DialogFragment() {
             val listingName = listing_name.text.toString()
             val description = listing_description.text.toString()
             if(image != null){
-                listener?.onFragmentInteraction(LandListingCreator(image, listingName, MainActivity.userNameFromMain, description))
+                listener?.onFragmentInteraction(LandListingCreator(image.toString(), listingName, MainActivity.userNameFromMain, description))
                 dismiss()
             }
         }
