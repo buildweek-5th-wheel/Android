@@ -16,7 +16,6 @@ import com.example.buildweek_5th_wheel.model.LandListingCreator
 import kotlinx.android.synthetic.main.rv_owners_list_item.view.*
 
 class RVOwnerAdapter(val data: ArrayList<LandListingCreator>) : RecyclerView.Adapter<RVOwnerAdapter.ViewHolder>(){
-    private val newlist =  ArrayList<LandListingCreator>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.rv_owners_list_item, parent, false)

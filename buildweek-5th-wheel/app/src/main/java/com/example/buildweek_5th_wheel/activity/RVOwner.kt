@@ -21,9 +21,9 @@ class RVOwner : AppCompatActivity() {
 
         MockData.createLandListing()
 
-        var mainList = MockData.landListingList
+        val mainList = MockData.landListingList
 
-        var searchList = ArrayList<LandListingCreator>()
+        val searchList = ArrayList<LandListingCreator>()
         searchList.addAll(mainList)
 
         search_lands.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
