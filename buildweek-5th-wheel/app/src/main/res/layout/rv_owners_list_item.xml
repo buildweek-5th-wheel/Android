@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/rv_owners_card_view"
+        android:layout_margin="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
     <LinearLayout
             android:id="@+id/list_item"
+            android:padding="8dp"
+            android:background="@android:color/darker_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -29,14 +33,6 @@
                 style="@style/cardViewItems"
                 android:textSize="16sp"
                 tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-
-        <Button
-                android:id="@+id/btn_reserve"
-                style="@style/cardViewItems"
-                android:layout_marginBottom="8dp"
-                tools:background="@color/colorPrimary"
-                tools:textColor="@color/colorAccent"
-                tools:text="reserve" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

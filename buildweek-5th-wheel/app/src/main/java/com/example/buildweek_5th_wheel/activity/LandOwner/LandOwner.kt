@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.land_owners_list_item.*
 class LandOwner : AppCompatActivity(), LandOwnerFragment.OnFragmentInteractionListener{
     override fun onFragmentInteraction(createLandListing: LandListingCreator) {
         MockData.landListingList.add(createLandListing)
-        recycler_view_land_owner.adapter = LandOwnerRecycler(MockData.landListingList)
+        recycler_view_land_owner.adapter?.notifyDataSetChanged()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +30,7 @@ class LandOwner : AppCompatActivity(), LandOwnerFragment.OnFragmentInteractionLi
             fragment.show(supportFragmentManager, "tag")
         }
         recycler_view_land_owner.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-
+        recycler_view_land_owner.adapter = LandOwnerRecycler(MockData.landListingList)
         //TODO: make the recycler view keep data when user leaves
         //recycler_view_land_owner.adapter = LandOwnerRecycler(MockData.landListingList)
 

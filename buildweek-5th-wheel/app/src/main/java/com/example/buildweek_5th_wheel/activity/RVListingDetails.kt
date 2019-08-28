@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.buildweek_5th_wheel.MockData
 import com.example.buildweek_5th_wheel.R
-import com.example.buildweek_5th_wheel.model.LandListingCreator
 import kotlinx.android.synthetic.main.activity_rvlisting_details.*
 
 class RVListingDetails : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_rvlisting_details)
 
         val landListing = intent.getIntExtra("key", 0)
