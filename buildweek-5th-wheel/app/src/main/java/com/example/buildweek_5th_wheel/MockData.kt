@@ -11,12 +11,13 @@ object MockData {
     var logInList = ArrayList<CreateUser>()
 
     val userNames = arrayListOf("ilikervs123", "rvsrock321", "rvparkowner123", "ihaveland123", "a")
-    val passWords = arrayListOf("password123", "password1234", "password12345", "password123456", "a")
+    val passWords =
+        arrayListOf("password123", "password1234", "password12345", "password123456", "a")
     val LandOwners = arrayListOf(false, false, true, true, false)
 
 
-    fun createLogInList(){
-        for (i in userNames.indices){
+    fun createLogInList() {
+        for (i in userNames.indices) {
             MockData.logInList.add(CreateUser(userNames[i], passWords[i], LandOwners[i]))
         }
     }
@@ -24,35 +25,40 @@ object MockData {
 
     var landListingList = ArrayList<LandListingCreator>()
 
-    val images = arrayListOf(
+    val images = mutableListOf(
         "android.resource://com.example.buildweek_5th_wheel/drawable/tree_land",
         "android.resource://com.example.buildweek_5th_wheel/drawable/dirt_land",
         "android.resource://com.example.buildweek_5th_wheel/drawable/cloud_land",
         "android.resource://com.example.buildweek_5th_wheel/drawable/car_land"
-        )
-    val listingName = arrayListOf(
+    )
+    val listingName = mutableListOf(
         "5 feet of land with a tree",
         "Land with dirt in Burley, Idaho",
         "Land with clouds",
         "Great land in Trenton, NJ"
     )
 
-    val landOwnerName = arrayListOf("SoftCamp", "DaddyStoveTop", "DaddyLampShad", "Brick")
+    val landOwnerName = mutableListOf("SoftCamp", "DaddyStoveTop", "DaddyLampShad", "Brick")
 
-    val description = arrayListOf(
+    val description = mutableListOf(
         "This is where my mom was born very great land one of my favorites.",
         "I have a lot of dirt and need money please come camp here",
         "look at all the pretty clouds I can talk to the big man upstairs and make sure you see some clouds if you stay here ;)",
         "That's my car its also for sale check it out on my insta"
     )
 
-    fun createLandListing(){
-        for (i in images.indices){
-            MockData.landListingList.add(LandListingCreator(Uri.parse(images[i]), listingName[i], landOwnerName[i], description[i]))
+    fun createLandListing() {
+        for (i in images.indices) {
+            MockData.landListingList.add(
+                LandListingCreator(
+                    Uri.parse(images[i]),
+                    listingName[i],
+                    landOwnerName[i],
+                    description[i]
+                )
+            )
         }
     }
-
-
 
 
 }
