@@ -1,8 +1,6 @@
 package com.example.buildweek_5th_wheel
 
-import android.content.res.Resources
 import android.net.Uri
-import androidx.core.content.ContextCompat
 import com.example.buildweek_5th_wheel.model.CreateUser
 import com.example.buildweek_5th_wheel.model.LandListingCreator
 
@@ -11,8 +9,7 @@ object MockData {
     var logInList = ArrayList<CreateUser>()
 
     val userNames = arrayListOf("ilikervs123", "rvsrock321", "rvparkowner123", "ihaveland123", "a")
-    val passWords =
-        arrayListOf("password123", "password1234", "password12345", "password123456", "a")
+    val passWords = arrayListOf("password123", "password1234", "password12345", "password123456", "a")
     val LandOwners = arrayListOf(false, false, true, true, false)
 
 

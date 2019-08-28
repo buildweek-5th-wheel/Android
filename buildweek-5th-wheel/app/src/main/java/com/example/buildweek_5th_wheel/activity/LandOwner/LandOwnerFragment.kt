@@ -1,6 +1,7 @@
 package com.example.buildweek_5th_wheel.activity.LandOwner
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -23,6 +24,8 @@ class LandOwnerFragment : DialogFragment() {
         val IMG_REQUEST_CODE = 6
     }
 
+    private var listener : OnFragmentInteractionListener? = null
+
     override fun onCreateView(
         //Displays land_owner_fragment in the fragment
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -31,9 +34,6 @@ class LandOwnerFragment : DialogFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        //Gets user input from the EditText views
-        val listingName = listing_name.text.toString()
-        val description = listing_description.text.toString()
         //On click of the image it starts an intent to look for an image
         image_add_image.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
@@ -44,8 +44,10 @@ class LandOwnerFragment : DialogFragment() {
         ///TODO: add alert if user does not selects and image or puts in text
         //Creates a new listing form the User input
         button_submit_listing.setOnClickListener {
+            val listingName = listing_name.text.toString()
+            val description = listing_description.text.toString()
             if(image != null){
-                MockData.landListingList.add(LandListingCreator(image, listingName, MainActivity.userNameFromMain, description))
+                listener?.onFragmentInteraction(LandListingCreator(image, listingName, MainActivity.userNameFromMain, description))
                 dismiss()
             }
         }
@@ -63,4 +65,21 @@ class LandOwnerFragment : DialogFragment() {
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnFragmentInteractionListener) {
+            listener = context
+        } else {
+            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
+        }
+    }
+
+
+    interface OnFragmentInteractionListener {
+        fun onFragmentInteraction(createLandListing: LandListingCreator)
+    }
+
+
+
 }
