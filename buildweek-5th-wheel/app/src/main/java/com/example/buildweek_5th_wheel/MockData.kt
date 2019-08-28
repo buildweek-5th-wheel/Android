@@ -12,7 +12,7 @@ object MockData {
 
     val userNames = arrayListOf("ilikervs123", "rvsrock321", "rvparkowner123", "ihaveland123", "a")
     val passWords = arrayListOf("password123", "password1234", "password12345", "password123456", "a")
-    val LandOwners = arrayListOf(false, false, true, true, false)
+    val LandOwners = arrayListOf(false, false, true, true, true)
 
 
     fun createLogInList(){

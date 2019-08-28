@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/land_owners_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:id="@+id/all_list_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <ImageView
+                android:id="@+id/land_owners_list_item_image"
+                style="@style/cardViewItems"
+                android:adjustViewBounds="true"
+                tools:contentDescription="placeholder image"
+                android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+                android:id="@+id/land_owners_list_item_title"
+                style="@style/cardViewItems"
+                android:textSize="20sp"
+                tools:text="title of listing" />
+
+        <TextView
+                android:id="@+id/land_owners_list_item_user_name"
+                style="@style/cardViewItems"
+                android:textSize="20sp"
+                tools:text="title of listing" />
+
+        <TextView
+                android:id="@+id/land_owners_list_item_desc"
+                style="@style/cardViewItems"
+                android:textSize="16sp"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
