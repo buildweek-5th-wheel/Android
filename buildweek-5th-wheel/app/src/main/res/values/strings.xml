@@ -7,4 +7,12 @@
     <string name="invalid_registration">Please enter a valid username/password</string>
     <string name="title_activity_land_owner">LandOwner</string>
     <string name="land_owner">Are you registering as a land owner?</string>
+    <string name="see_details">See details</string>
+    <string name="more_info">More Info</string>
+    <string name="title_of_listing">title of listing</string>
+    <string name="property_owner">Property owner</string>
+    <string name="edit_listing">Edit Listing</string>
+    <string name="name_of_listing">Name of listing</string>
+    <string name="description_of_listing">Description of listing</string>
+    <string name="add_to_listing">Add to listing</string>
 </resources>
