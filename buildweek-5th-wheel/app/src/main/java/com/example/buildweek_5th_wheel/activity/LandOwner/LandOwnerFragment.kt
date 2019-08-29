@@ -3,15 +3,12 @@ package com.example.buildweek_5th_wheel.activity.LandOwner
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodSession
 import androidx.fragment.app.DialogFragment
-import com.example.buildweek_5th_wheel.MockData
 import com.example.buildweek_5th_wheel.R
 import com.example.buildweek_5th_wheel.activity.MainActivity
 import com.example.buildweek_5th_wheel.model.LandListingCreator
@@ -37,12 +34,11 @@ class LandOwnerFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         //On click of the image it starts an intent to look for an image
         image_add_image.setOnClickListener {
-            val intent = Intent(Intent.ACTION_GET_CONTENT)
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
             intent.type = "image/*"
             startActivityForResult(intent, IMG_REQUEST_CODE)
         }
 
-        ///TODO: add alert if user does not selects and image or puts in text
         //Creates a new listing form the User input
         button_submit_listing.setOnClickListener {
             val listingName = listing_name.text.toString()

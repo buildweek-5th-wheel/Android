@@ -17,11 +17,11 @@
                 android:id="@+id/land_owners_list_item_image"
                 style="@style/cardViewItems"
                 android:adjustViewBounds="true"
-                tools:contentDescription="placeholder image"
-                tools:src="@drawable/ic_launcher_background"/>
+                tools:contentDescription="placeholder image"/>
 
         <TextView
                 android:id="@+id/land_owners_list_item_title"
+                android:textStyle="bold"
                 style="@style/cardViewItems"
                 android:textSize="20sp"
                 tools:text="@string/title_of_listing" />
@@ -29,7 +29,7 @@
         <TextView
                 android:id="@+id/land_owners_list_item_user_name"
                 style="@style/cardViewItems"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 tools:text="@string/property_owner" />
 
         <TextView

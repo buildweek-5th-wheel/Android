@@ -20,8 +20,8 @@ class LandOwnerRecycler(val data: ArrayList<LandListingCreator>) : RecyclerView.
     override fun onBindViewHolder(holder: ViewHolder, i: Int) {
         holder.image.setImageURI(Uri.parse(data[i].photoLocation))
         holder.title.text = data[i].listingName
-        holder.userName.text = data[i].userName
-        holder.description.text = data[i].description
+        holder.userName.text = "Land Owner: ${data[i].userName}"
+        holder.description.text = "Description: ${data[i].description}"
 
 
     }
