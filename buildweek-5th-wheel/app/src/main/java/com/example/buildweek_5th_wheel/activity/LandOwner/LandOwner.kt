@@ -1,6 +1,7 @@
 package com.example.buildweek_5th_wheel.activity.LandOwner
 
 import android.os.Bundle
+import android.os.Handler
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,12 +12,18 @@ import com.example.buildweek_5th_wheel.model.LandListingCreator
 
 import kotlinx.android.synthetic.main.activity_land_owner.*
 import kotlinx.android.synthetic.main.content_land_owner.*
+import kotlinx.android.synthetic.main.land_owner_fragment.*
 import kotlinx.android.synthetic.main.land_owners_list_item.*
 
 class LandOwner : AppCompatActivity(), LandOwnerFragment.OnFragmentInteractionListener{
+    val fragment = LandOwnerFragment()
+
     override fun onFragmentInteraction(createLandListing: LandListingCreator) {
         MockData.landListingList.add(createLandListing)
         recycler_view_land_owner.adapter?.notifyDataSetChanged()
+
+        val handler = Handler()
+        handler.postDelayed({fragment.dismiss()}, 2000)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,13 +33,10 @@ class LandOwner : AppCompatActivity(), LandOwnerFragment.OnFragmentInteractionLi
 
         //OnClick starts LandOwnerFragment
         button_create_listing.setOnClickListener {
-            val fragment = LandOwnerFragment()
             fragment.show(supportFragmentManager, "tag")
         }
         recycler_view_land_owner.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         recycler_view_land_owner.adapter = LandOwnerRecycler(MockData.landListingList)
-        //TODO: make the recycler view keep data when user leaves
-        //recycler_view_land_owner.adapter = LandOwnerRecycler(MockData.landListingList)
 
 
 

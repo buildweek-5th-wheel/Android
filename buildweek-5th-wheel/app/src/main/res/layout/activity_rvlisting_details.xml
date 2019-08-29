@@ -8,7 +8,7 @@
         tools:context=".activity.RVListingDetails">
 
     <ImageView
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:id="@+id/rv_owners_details_image"
             style="@style/cardViewItems"
             android:adjustViewBounds="true"
@@ -16,18 +16,28 @@
             android:src="@drawable/ic_launcher_background" />
 
     <TextView
+            android:id="@+id/display_date"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:layout_weight="1"
             android:id="@+id/rv_owners_details_title"
             style="@style/cardViewItems"
             android:textSize="20sp"
             tools:text="title of listing" />
 
     <TextView
+            android:layout_weight="1"
             android:id="@+id/rv_owners_details_owner_name"
             style="@style/cardViewItems"
             android:textSize="20sp"
             tools:text="username" />
 
     <TextView
+            android:layout_weight="1"
             android:id="@+id/rv_owners_details_desc"
             style="@style/cardViewItems"
             android:textSize="16sp"
@@ -36,10 +46,8 @@
     <Button
             android:id="@+id/btn_reserve"
             style="@style/cardViewItems"
-            android:layout_marginBottom="8dp"
-            android:background="@color/colorPrimary"
-            android:textColor="@color/colorAccent"
-            android:text="reserve"/>
+            android:layout_marginBottom="8dp"/>
+
 
 
 </LinearLayout>

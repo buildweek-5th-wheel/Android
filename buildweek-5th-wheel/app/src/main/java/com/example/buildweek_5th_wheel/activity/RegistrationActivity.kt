@@ -30,7 +30,7 @@ class RegistrationActivity : AppCompatActivity() {
             }
 
             //Creates an TextView at the top of the page to let the user know that the haven't add a username/password
-            else LogInAlert.createAlert(registration_layout)
+            else LogInAlert.createAlert(main_view_registration, 1)
         }
     }
 }

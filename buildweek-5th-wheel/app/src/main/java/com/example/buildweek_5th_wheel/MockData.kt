@@ -15,7 +15,7 @@ object MockData {
 
     fun createLogInList() {
         for (i in userNames.indices) {
-            MockData.logInList.add(CreateUser(userNames[i], passWords[i], LandOwners[i]))
+            logInList.add(CreateUser(userNames[i], passWords[i], LandOwners[i]))
         }
     }
 
@@ -46,7 +46,7 @@ object MockData {
 
     fun createLandListing() {
         for (i in images.indices) {
-            MockData.landListingList.add(
+            landListingList.add(
                 LandListingCreator(
                     images[i],
                     listingName[i],

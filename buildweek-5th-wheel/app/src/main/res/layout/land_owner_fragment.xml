@@ -40,4 +40,3 @@
             android:text="@string/add_to_listing"
             android:textColor="@color/colorAccent" />
 
-</LinearLayout>
