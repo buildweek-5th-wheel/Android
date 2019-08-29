@@ -20,6 +20,8 @@ class RVListingDetails : AppCompatActivity() {
         rv_owners_details_owner_name.text = landListing.userName
         rv_owners_details_desc.text = landListing.description
 
+
+
         btn_reserve.setOnClickListener {
             val fragment = RVOwnerFragment()
             fragment.show(supportFragmentManager, "datePicker")
