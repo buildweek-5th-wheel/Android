@@ -4,6 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/rv_owners_card_view"
         android:layout_margin="8dp"
+        android:elevation="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 

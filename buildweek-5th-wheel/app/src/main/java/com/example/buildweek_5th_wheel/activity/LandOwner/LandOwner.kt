@@ -23,7 +23,7 @@ class LandOwner : AppCompatActivity(), LandOwnerFragment.OnFragmentInteractionLi
         recycler_view_land_owner.adapter?.notifyDataSetChanged()
 
         val handler = Handler()
-        handler.postDelayed(Runnable{ fragment.dismiss() }, 2000)
+        handler.postDelayed({fragment.dismiss()}, 2000)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
