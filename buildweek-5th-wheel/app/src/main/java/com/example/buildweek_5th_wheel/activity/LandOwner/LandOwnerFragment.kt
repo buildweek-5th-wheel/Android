@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodSession
 import androidx.fragment.app.DialogFragment
 import com.example.buildweek_5th_wheel.MockData
 import com.example.buildweek_5th_wheel.R
@@ -47,8 +48,9 @@ class LandOwnerFragment : DialogFragment() {
             val listingName = listing_name.text.toString()
             val description = listing_description.text.toString()
             if(image != null){
+                visibility_control.visibility = View.GONE
+                land_owner_fragment.addView(LoadingScreen(context, null))
                 listener?.onFragmentInteraction(LandListingCreator(image.toString(), listingName, MainActivity.userNameFromMain, description))
-                dismiss()
             }
         }
 
