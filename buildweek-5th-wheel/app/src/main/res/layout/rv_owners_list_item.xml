@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/rv_owners_card_view"
         android:layout_margin="8dp"
         android:elevation="20dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
 
     <LinearLayout
             android:id="@+id/list_item"
-            android:padding="8dp"
-            android:background="@android:color/darker_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -20,8 +18,8 @@
                 android:id="@+id/rv_owners_list_item_image"
                 style="@style/cardViewItems"
                 android:adjustViewBounds="true"
-                tools:contentDescription="placeholder image"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background"
+                tools:contentDescription="placeholder image" />
 
         <TextView
                 android:id="@+id/rv_owners_list_item_title"
@@ -34,6 +32,16 @@
                 style="@style/cardViewItems"
                 android:textSize="16sp"
                 tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+        <TextView
+                style="@style/cardViewItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@string/more_info"
+                android:textColor="@color/colorAccent" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

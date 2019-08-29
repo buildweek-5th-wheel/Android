@@ -1,61 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/land_owner_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#D8D8D8"
         android:orientation="vertical">
 
-    <LinearLayout
-            android:id="@+id/visibility_control"
+    <ImageView
+            android:id="@+id/image_add_image"
+            style="@style/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/select_image"/>
+
+    <EditText
+            android:id="@+id/listing_name"
+            style="@style/login"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:hint="@string/name_of_listing"
+            android:inputType="text" />
 
-        <ImageView
-                android:id="@+id/image_add_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:elevation="20dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:src="@drawable/select_image"/>
+    <EditText
+            android:id="@+id/listing_description"
+            style="@style/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description_of_listing"
+            android:inputType="text" />
 
-        <EditText
-                android:id="@+id/listing_name"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Name of listing"/>
-
-        <EditText
-                android:id="@+id/listing_description"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Description of listing"/>
-
-        <Button
-                android:id="@+id/button_submit_listing"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Add to listing"/>
-    </LinearLayout>
-
-
-
-</LinearLayout>
+    <Button
+            android:id="@+id/button_submit_listing"
+            style="@style/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/add_to_listing"
+            android:textColor="@color/colorAccent" />
 
