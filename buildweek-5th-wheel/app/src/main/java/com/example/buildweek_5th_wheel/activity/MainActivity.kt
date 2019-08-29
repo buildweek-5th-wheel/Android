@@ -39,22 +39,30 @@ class MainActivity : AppCompatActivity() {
         btn_login.setOnClickListener {
             val userName = username_main.text.toString()
             val passWord = password_main.text.toString()
-            if (userName != "" && passWord !=""){
+            var passUser = false
+            var isLandOwner: Boolean = false
+            if (userName != "" && passWord !="") {
                 MockData.logInList.forEach {
                     if (it.userName == userName && it.passWord == passWord) {
-                        when (it.isLandOwner) {
-                            true -> {
-                                userNameFromMain = userName
-                                startActivity(gotoLandOwner)
-                            }// launch land owner activity
-                            false -> startActivity(gotoRVOwner) //launch rv activity
-                        }
+                        passUser = true
+                        isLandOwner = it.isLandOwner
                     }
-                    else LogInAlert.createAlert(login_layout) // needs to be fixed displays because the forEach keeps going
                 }
+
+                if (passUser){
+                    when(isLandOwner){
+                        true -> {
+                            userNameFromMain = userName
+                            startActivity(gotoLandOwner)
+                        }// launch land owner activity
+                        false -> startActivity(gotoRVOwner) //launch rv activity
+                    }
+                }
+                else LogInAlert.createAlert(login_layout, 1)
             }
-            else LogInAlert.createAlert(login_layout)
+            else LogInAlert.createAlert(login_layout, 1)
         }
+
 
 
 
