@@ -3,6 +3,7 @@ package com.example.buildweek_5th_wheel.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import com.example.buildweek_5th_wheel.MockData
 import com.example.buildweek_5th_wheel.R
 import com.example.buildweek_5th_wheel.activity.LandOwner.LandOwner
@@ -62,12 +63,13 @@ class MainActivity : AppCompatActivity() {
             }
             else LogInAlert.createAlert(login_layout, 1)
         }
+    }
 
-
-
-
-
-
-
+    override fun onStop() {
+        super.onStop()
+        if (login_layout.getChildAt(1).tag == "displayed"){
+            val alertView = login_layout.getChildAt(1) as TextView
+            login_layout.removeView(alertView)
+        }
     }
 }

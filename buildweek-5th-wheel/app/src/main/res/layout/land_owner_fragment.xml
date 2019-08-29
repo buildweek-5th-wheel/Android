@@ -6,37 +6,45 @@
         android:background="#D8D8D8"
         android:orientation="vertical">
 
-    <ImageView
-            android:id="@+id/image_add_image"
-            style="@style/login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/select_image"/>
-
-    <EditText
-            android:id="@+id/listing_name"
-            style="@style/login"
+    <LinearLayout
+            android:id="@+id/visibility_control"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/name_of_listing"
-            android:inputType="text" />
+            android:orientation="vertical">
 
-    <EditText
-            android:id="@+id/listing_description"
-            style="@style/login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/description_of_listing"
-            android:inputType="text" />
+        <ImageView
+                android:id="@+id/image_add_image"
+                style="@style/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/select_image" />
 
-    <Button
-            android:id="@+id/button_submit_listing"
-            style="@style/login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="@color/colorPrimary"
-            android:text="@string/add_to_listing"
-            android:textColor="@color/colorAccent" />
+        <EditText
+                android:id="@+id/listing_name"
+                style="@style/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name_of_listing"
+                android:inputType="text" />
 
+        <EditText
+                android:id="@+id/listing_description"
+                style="@style/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description_of_listing"
+                android:inputType="text" />
+
+        <Button
+                android:id="@+id/button_submit_listing"
+                style="@style/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/add_to_listing"
+                android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+</LinearLayout>
