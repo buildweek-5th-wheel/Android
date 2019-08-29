@@ -47,6 +47,7 @@ class LandOwnerFragment : DialogFragment() {
                 visibility_control.visibility = View.GONE
                 land_owner_fragment.addView(LoadingScreen(context, null))
                 listener?.onFragmentInteraction(LandListingCreator(image.toString(), listingName, MainActivity.userNameFromMain, description))
+                image = null
             }
         }
 

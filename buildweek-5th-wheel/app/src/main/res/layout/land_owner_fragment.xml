@@ -3,7 +3,7 @@
         android:id="@+id/land_owner_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#D8D8D8"
+        android:background="#FFF"
         android:orientation="vertical">
 
     <LinearLayout
@@ -42,9 +42,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorAccent"
                 android:text="@string/add_to_listing"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@android:color/white" />
     </LinearLayout>
 
 </LinearLayout>
