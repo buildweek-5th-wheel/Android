@@ -21,6 +21,7 @@
         <TextView
                 android:id="@+id/rv_owners_list_item_title"
                 style="@style/cardViewItems"
+                android:gravity="center"
                 android:textSize="20sp"
                 tools:text="title of listing" />
 
@@ -30,13 +31,14 @@
                 android:textSize="16sp"
                 tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
 
-        <TextView
+        <Button
                 style="@style/cardViewItems"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:background="@color/colorPrimary"
-                android:gravity="center"
+                android:clickable="false"
+                android:focusable="false"
                 android:text="@string/more_info"
                 android:textColor="@color/colorAccent" />
     </LinearLayout>
