@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/land_owners_card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp">
+        android:layout_margin="8dp"
+        android:elevation="20dp">
 
     <LinearLayout
             android:id="@+id/all_list_item"
@@ -17,20 +17,28 @@
                 android:id="@+id/land_owners_list_item_image"
                 style="@style/cardViewItems"
                 android:adjustViewBounds="true"
-                tools:contentDescription="placeholder image"/>
+                tools:contentDescription="placeholder image" />
 
         <TextView
                 android:id="@+id/land_owners_list_item_title"
-                android:textStyle="bold"
                 style="@style/cardViewItems"
-                android:textSize="20sp"
+                android:gravity="center"
+                android:textSize="24sp"
                 tools:text="@string/title_of_listing" />
 
         <TextView
                 android:id="@+id/land_owners_list_item_user_name"
                 style="@style/cardViewItems"
-                android:textSize="16sp"
+                android:gravity="end"
+                android:textSize="18sp"
                 tools:text="@string/property_owner" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/colorAccent" />
 
         <TextView
                 android:id="@+id/land_owners_list_item_desc"
@@ -38,12 +46,14 @@
                 android:textSize="16sp"
                 tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
 
-        <TextView
+        <Button
                 style="@style/cardViewItems"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:background="@color/colorPrimary"
+                android:clickable="false"
+                android:focusable="false"
                 android:gravity="center"
                 android:text="@string/edit_listing"
                 android:textColor="@color/colorAccent" />

@@ -3,7 +3,7 @@
         android:id="@+id/land_owner_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFF"
+        android:background="#D8D8D8"
         android:orientation="vertical">
 
     <LinearLayout

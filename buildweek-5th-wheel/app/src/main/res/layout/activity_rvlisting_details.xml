@@ -1,70 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".activity.RVListingDetails">
 
-    <ImageView
-            android:id="@+id/rv_owners_details_image"
-            style="@style/cardViewItems"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:adjustViewBounds="true"
-            tools:contentDescription="placeholder image"
-            android:src="@drawable/ic_launcher_background" />
-
-
-    <TextView
-            android:id="@+id/rv_owners_details_title"
-            style="@style/cardViewItems"
-            app:layout_constraintTop_toBottomOf="@id/rv_owners_details_image"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            tools:text="title of listing"/>
-
-    <TextView
-            android:id="@+id/rv_owners_details_owner_name"
-            style="@style/cardViewItems"
-            app:layout_constraintTop_toBottomOf="@id/rv_owners_details_title"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:textSize="18sp"
-            tools:text="username" />
-
-    <TextView
-            android:id="@+id/rv_owners_details_desc"
-            style="@style/cardViewItems"
-            app:layout_constraintTop_toBottomOf="@id/rv_owners_details_owner_name"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:textSize="16sp"
-            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-
-
-    <TextView
-            android:id="@+id/display_date"
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_margin="8dp"
-            app:layout_constraintBottom_toBottomOf="@id/btn_reserve"
-            app:layout_constraintTop_toBottomOf="@id/rv_owners_details_desc"
-            app:layout_constraintVertical_bias="0.4"/>
+            android:orientation="vertical">
 
-    <Button
-            android:id="@+id/btn_reserve"
-            android:text="reserve location"
-            android:background="@color/colorAccent"
-            android:textColor="@android:color/white"
-            style="@style/cardViewItems"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginBottom="8dp"/>
+        <ImageView
+                android:id="@+id/rv_owners_details_image"
+                style="@style/cardViewItems"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_launcher_background"
+                tools:contentDescription="placeholder image" />
 
 
+        <TextView
+                android:id="@+id/rv_owners_details_title"
+                style="@style/cardViewItems"
+                android:gravity="center"
+                android:textSize="20sp"
+                tools:text="title of listing" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+                android:id="@+id/rv_owners_details_owner_name"
+                style="@style/cardViewItems"
+                android:gravity="end"
+                android:textSize="18sp"
+                tools:text="username" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/colorAccent" />
+
+        <TextView
+                android:id="@+id/rv_owners_details_desc"
+                style="@style/cardViewItems"
+                android:textSize="16sp"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+
+        <TextView
+                android:id="@+id/display_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        <Button
+                android:id="@+id/btn_reserve"
+                style="@style/cardViewItems"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimary"
+                android:text="reserve location"
+                android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+
+</ScrollView>
