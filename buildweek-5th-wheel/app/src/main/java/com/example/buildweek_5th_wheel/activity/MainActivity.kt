@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         val gotoLandOwner = Intent(this, LandOwner::class.java)
         val gotoRVOwner = Intent(this, RVOwner::class.java)
 
+        //Checks if username and password match the user input and then goes to correct activity
         btn_login.setOnClickListener {
             val userName = username_main.text.toString()
             val passWord = password_main.text.toString()
@@ -49,7 +50,6 @@ class MainActivity : AppCompatActivity() {
                         isLandOwner = it.isLandOwner
                     }
                 }
-
                 if (passUser){
                     when(isLandOwner){
                         true -> {
@@ -65,6 +65,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //gets rid of alert text if created when a new activity is started
     override fun onStop() {
         super.onStop()
         if (login_layout.getChildAt(1).tag == "displayed"){

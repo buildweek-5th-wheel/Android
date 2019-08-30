@@ -6,6 +6,8 @@ import com.example.buildweek_5th_wheel.model.LandListingCreator
 
 object MockData {
 
+    //Mock data to fill in for the data we would get from the back end
+
     var logInList = ArrayList<CreateUser>()
 
     val userNames = arrayListOf("ilikervs123", "rvsrock321", "rvparkowner123", "ihaveland123", "a")

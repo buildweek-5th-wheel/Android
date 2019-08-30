@@ -17,8 +17,8 @@ class RVListingDetails : AppCompatActivity() {
 
         rv_owners_details_image.setImageURI(Uri.parse(landListing.photoLocation))
         rv_owners_details_title.text = landListing.listingName
-        rv_owners_details_owner_name.text = landListing.userName
-        rv_owners_details_desc.text = landListing.description
+        rv_owners_details_owner_name.text = "Land Owner:\n${landListing.userName}"
+        rv_owners_details_desc.text = "Description:\n${landListing.description}"
 
 
 

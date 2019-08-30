@@ -20,6 +20,8 @@ import java.io.Serializable
 
 class RVOwnerAdapter(val data: ArrayList<LandListingCreator>) : RecyclerView.Adapter<RVOwnerAdapter.ViewHolder>(){
 
+    //RecyclerView for RV owners this one you should just get I am tired of typing
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.rv_owners_list_item, parent, false)
         return ViewHolder(view)
@@ -32,11 +34,8 @@ class RVOwnerAdapter(val data: ArrayList<LandListingCreator>) : RecyclerView.Ada
         holder.listTitle.text = data[position].listingName
         holder.listDesc.text = data[position].description
 
-
         holder.listItem.setOnClickListener {
             val intent = Intent(it.context, RVListingDetails::class.java)
-
-            //println(data[position] is Serializable)
             intent.putExtra("key", data[position])
             startActivity(it.context, intent, null)
         }

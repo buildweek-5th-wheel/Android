@@ -15,16 +15,19 @@ import com.example.buildweek_5th_wheel.R
 class LoadingScreen (context: Context?, attrs: AttributeSet?): LinearLayout(context, attrs){
 
     init {
+        //adding attributes to the LinearLayout
         gravity = Gravity.CENTER
         orientation = VERTICAL
         setPadding(32,32,32,32)
 
+        //Create the loading image view and then animates it
         val createImage = ImageView(context)
         val loadingIcon = ContextCompat.getDrawable(context!!, R.drawable.loading_animation)
         createImage.setImageDrawable(loadingIcon)
         addView(createImage)
         (loadingIcon as AnimatedVectorDrawable).start()
 
+        //Create text view that says Loading below the loading image
         val loadingText = TextView(context)
         loadingText.apply {
             text = "Loading..."
