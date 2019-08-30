@@ -12,7 +12,7 @@ import com.example.buildweek_5th_wheel.R
 object LogInAlert {
     fun createAlert(parent: LinearLayout, childLocation: Int = 0){
 
-        //TODO make the text in the string resources
+        //alerts the user if they did something that they shouldn't
 
         //Checks to see if alert is already there if so then it just replaces text instead of creating a new view
         if (parent.getChildAt(childLocation).tag == "displayed"){

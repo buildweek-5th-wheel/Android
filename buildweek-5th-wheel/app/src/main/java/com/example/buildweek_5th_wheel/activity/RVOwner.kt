@@ -19,6 +19,7 @@ class RVOwner : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rvowners)
 
+        //adds mock data to the list
         MockData.createLandListing()
 
         val mainList = MockData.landListingList
@@ -26,6 +27,7 @@ class RVOwner : AppCompatActivity() {
         val searchList = ArrayList<LandListingCreator>()
         searchList.addAll(mainList)
 
+        //Creates search bar
         search_lands.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 return true
@@ -42,8 +44,6 @@ class RVOwner : AppCompatActivity() {
                             searchList.add(it)
                         }
                     }
-
-
                     rv_owners_recycler_view.adapter?.notifyDataSetChanged()
                 }
                 else{
@@ -57,6 +57,7 @@ class RVOwner : AppCompatActivity() {
 
         })
 
+        //Add recycler view with the mock data
         rv_owners_recycler_view.setHasFixedSize(true)
         rv_owners_recycler_view.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         rv_owners_recycler_view.adapter = RVOwnerAdapter(searchList)

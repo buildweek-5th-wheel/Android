@@ -19,9 +19,12 @@ class LandOwner : AppCompatActivity(), LandOwnerFragment.OnFragmentInteractionLi
     val fragment = LandOwnerFragment()
 
     override fun onFragmentInteraction(createLandListing: LandListingCreator) {
+        //When you interact with the fragment, the LandListingCreator created is added to the array of the ladder.
+        //Then notifies the RecyclerView that it needs to display the new LandListingCreator
         MockData.landListingList.add(createLandListing)
         recycler_view_land_owner.adapter?.notifyDataSetChanged()
 
+        //Delays the dismissing the LandOwnerFragment by 2 seconds
         val handler = Handler()
         handler.postDelayed({fragment.dismiss()}, 2000)
     }
@@ -35,12 +38,10 @@ class LandOwner : AppCompatActivity(), LandOwnerFragment.OnFragmentInteractionLi
         button_create_listing.setOnClickListener {
             fragment.show(supportFragmentManager, "tag")
         }
+
+        //Display RecyclerView inflating an array of LandListingCreator
         recycler_view_land_owner.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         recycler_view_land_owner.adapter = LandOwnerRecycler(MockData.landListingList)
-
-
-
-
     }
 
 }
